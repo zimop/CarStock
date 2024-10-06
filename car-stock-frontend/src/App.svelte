@@ -1,5 +1,5 @@
 <script>
-    import CarsList from './CarsList.svelte'
+    import CarsList from './components/CarsList.svelte'
 </script>
 
 

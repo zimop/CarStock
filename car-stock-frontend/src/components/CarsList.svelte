@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-    import { fetchCars } from '../api'
+    import { fetchCars } from '../api/api'
     let cars = []
     onMount(async () => {
         cars = await fetchCars();

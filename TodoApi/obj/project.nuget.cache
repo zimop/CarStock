@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yEaCIDY4PIs=",
+  "dgSpecHash": "JhYBNZjMS04=",
   "success": true,
   "projectFilePath": "C:\\Users\\zimop\\CarStock\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\zimop\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\zimop\\.nuget\\packages\\microsoft.data.sqlite.core\\8.0.8\\microsoft.data.sqlite.core.8.0.8.nupkg.sha512",
     "C:\\Users\\zimop\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.8\\microsoft.entityframeworkcore.8.0.8.nupkg.sha512",
     "C:\\Users\\zimop\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.8\\microsoft.entityframeworkcore.abstractions.8.0.8.nupkg.sha512",

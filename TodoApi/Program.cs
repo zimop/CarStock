@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using CarStockApi.Data;
+using Microsoft.Extensions.DependencyInjection;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllers();
 
-// DBContext Registration 
-builder.Services.AddDbContext<CarContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("CarDatabase")));
+// Dapper Registration 
+builder.Services.AddSingleton<CarRepository>(sp =>
+    new CarRepository(builder.Configuration.GetConnectionString("CarDatabase")));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

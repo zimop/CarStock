@@ -19,6 +19,7 @@
         model = "";
         stocklevel = "";
         // send data to the api
+        open = false;
     }
 </script>
 

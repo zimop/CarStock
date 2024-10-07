@@ -1,5 +1,5 @@
 <script>
-	import  { deleteCar} from './../api/api.js';
+	import {deleteCar} from './../api/api.js';
     import {fetchCarId} from './../api/api.js';
     let year = 0;
     let make = '';

@@ -21,6 +21,7 @@ export const fetchCarId = async (make, model, year) => {
             year
         }
     });
+    console.log(response.data)
     return response.data;
 }
 

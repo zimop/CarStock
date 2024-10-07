@@ -1,6 +1,5 @@
 <script>
     import CarsList from './components/CarsList.svelte'
-    import AddCar from './components/AddCar.svelte';
     import DeleteCar from './components/DeleteCar.svelte';
     import HomePage from './pages/HomePage.svelte';
 </script>
@@ -11,6 +10,5 @@
 
 <ul>
     <HomePage/>
-    <AddCar/>
     <DeleteCar/>
 </ul>

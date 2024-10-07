@@ -5,12 +5,12 @@
     import DeleteAction from './DeleteAction.svelte';
     import EditAction from './EditAction.svelte';
     
-    let cars = []
+    let cars = [];
     onMount(async () => {
         cars = await fetchCars();
         console.log(cars)
         console.log("i am zimo")
-    });
+    } );
 
 </script>
 

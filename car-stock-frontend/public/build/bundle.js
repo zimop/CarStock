@@ -15230,12 +15230,12 @@ var app = (function () {
 				t8 = space();
 				create_component(deleteaction.$$.fragment);
 				t9 = space();
-				add_location(td0, file$4, 29, 8, 687);
-				add_location(td1, file$4, 30, 8, 716);
-				add_location(td2, file$4, 31, 8, 746);
-				add_location(td3, file$4, 32, 8, 775);
-				add_location(td4, file$4, 33, 8, 810);
-				add_location(tr, file$4, 28, 6, 673);
+				add_location(td0, file$4, 29, 8, 689);
+				add_location(td1, file$4, 30, 8, 718);
+				add_location(td2, file$4, 31, 8, 748);
+				add_location(td3, file$4, 32, 8, 777);
+				add_location(td4, file$4, 33, 8, 812);
+				add_location(tr, file$4, 28, 6, 675);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, tr, anchor);
@@ -15359,14 +15359,14 @@ var app = (function () {
 					each_blocks[i].c();
 				}
 
-				add_location(th0, file$4, 19, 8, 482);
-				add_location(th1, file$4, 20, 8, 505);
-				add_location(th2, file$4, 21, 8, 529);
-				add_location(th3, file$4, 22, 8, 552);
-				add_location(th4, file$4, 23, 8, 582);
-				add_location(tr, file$4, 18, 6, 468);
-				add_location(thead, file$4, 17, 4, 453);
-				add_location(tbody, file$4, 26, 4, 631);
+				add_location(th0, file$4, 19, 8, 484);
+				add_location(th1, file$4, 20, 8, 507);
+				add_location(th2, file$4, 21, 8, 531);
+				add_location(th3, file$4, 22, 8, 554);
+				add_location(th4, file$4, 23, 8, 584);
+				add_location(tr, file$4, 18, 6, 470);
+				add_location(thead, file$4, 17, 4, 455);
+				add_location(tbody, file$4, 26, 4, 633);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, thead, anchor);
@@ -16098,7 +16098,7 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (25:8) <InputGroupText>
+	// (33:8) <InputGroupText>
 	function create_default_slot_5(ctx) {
 		let t;
 
@@ -16120,14 +16120,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_5.name,
 			type: "slot",
-			source: "(25:8) <InputGroupText>",
+			source: "(33:8) <InputGroupText>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (24:4) <InputGroup>
+	// (32:4) <InputGroup>
 	function create_default_slot_4(ctx) {
 		let inputgrouptext;
 		let t;
@@ -16217,14 +16217,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_4.name,
 			type: "slot",
-			source: "(24:4) <InputGroup>",
+			source: "(32:4) <InputGroup>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (31:8) <InputGroupText>
+	// (39:8) <InputGroupText>
 	function create_default_slot_3(ctx) {
 		let t;
 
@@ -16246,14 +16246,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_3.name,
 			type: "slot",
-			source: "(31:8) <InputGroupText>",
+			source: "(39:8) <InputGroupText>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (30:4) <InputGroup>
+	// (38:4) <InputGroup>
 	function create_default_slot_2(ctx) {
 		let inputgrouptext;
 		let t;
@@ -16343,14 +16343,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_2.name,
 			type: "slot",
-			source: "(30:4) <InputGroup>",
+			source: "(38:4) <InputGroup>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (36:4) <Button color = "primary" on:click = {handleSubmit}>
+	// (44:4) <Button color = "primary" on:click = {handleSubmit}>
 	function create_default_slot_1(ctx) {
 		let t;
 
@@ -16372,14 +16372,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_1.name,
 			type: "slot",
-			source: "(36:4) <Button color = \\\"primary\\\" on:click = {handleSubmit}>",
+			source: "(44:4) <Button color = \\\"primary\\\" on:click = {handleSubmit}>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (52:10) {#each cars as car}
+	// (60:10) {#each cars as car}
 	function create_each_block(ctx) {
 		let tr;
 		let td0;
@@ -16444,12 +16444,12 @@ var app = (function () {
 				t8 = space();
 				create_component(deleteaction.$$.fragment);
 				t9 = space();
-				add_location(td0, file$2, 53, 12, 1508);
-				add_location(td1, file$2, 54, 12, 1541);
-				add_location(td2, file$2, 55, 12, 1575);
-				add_location(td3, file$2, 56, 12, 1608);
-				add_location(td4, file$2, 57, 12, 1647);
-				add_location(tr, file$2, 52, 10, 1490);
+				add_location(td0, file$2, 61, 12, 1750);
+				add_location(td1, file$2, 62, 12, 1783);
+				add_location(td2, file$2, 63, 12, 1817);
+				add_location(td3, file$2, 64, 12, 1850);
+				add_location(td4, file$2, 65, 12, 1889);
+				add_location(tr, file$2, 60, 10, 1732);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, tr, anchor);
@@ -16514,14 +16514,14 @@ var app = (function () {
 			block,
 			id: create_each_block.name,
 			type: "each",
-			source: "(52:10) {#each cars as car}",
+			source: "(60:10) {#each cars as car}",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (41:4) <Table bordered>
+	// (49:4) <Table bordered>
 	function create_default_slot(ctx) {
 		let thead;
 		let tr;
@@ -16573,14 +16573,14 @@ var app = (function () {
 					each_blocks[i].c();
 				}
 
-				add_location(th0, file$2, 43, 12, 1263);
-				add_location(th1, file$2, 44, 12, 1290);
-				add_location(th2, file$2, 45, 12, 1318);
-				add_location(th3, file$2, 46, 12, 1345);
-				add_location(th4, file$2, 47, 12, 1379);
-				add_location(tr, file$2, 42, 10, 1245);
-				add_location(thead, file$2, 41, 8, 1226);
-				add_location(tbody, file$2, 50, 8, 1440);
+				add_location(th0, file$2, 51, 12, 1505);
+				add_location(th1, file$2, 52, 12, 1532);
+				add_location(th2, file$2, 53, 12, 1560);
+				add_location(th3, file$2, 54, 12, 1587);
+				add_location(th4, file$2, 55, 12, 1621);
+				add_location(tr, file$2, 50, 10, 1487);
+				add_location(thead, file$2, 49, 8, 1468);
+				add_location(tbody, file$2, 58, 8, 1682);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, thead, anchor);
@@ -16666,7 +16666,7 @@ var app = (function () {
 			block,
 			id: create_default_slot.name,
 			type: "slot",
-			source: "(41:4) <Table bordered>",
+			source: "(49:4) <Table bordered>",
 			ctx
 		});
 
@@ -16737,9 +16737,9 @@ var app = (function () {
 				t4 = space();
 				div1 = element("div");
 				create_component(table.$$.fragment);
-				add_location(h2, file$2, 22, 4, 639);
-				add_location(div0, file$2, 21, 0, 628);
-				add_location(div1, file$2, 39, 0, 1189);
+				add_location(h2, file$2, 30, 4, 881);
+				add_location(div0, file$2, 29, 0, 870);
+				add_location(div1, file$2, 47, 0, 1431);
 			},
 			l: function claim(nodes) {
 				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16835,18 +16835,26 @@ var app = (function () {
 		let model = "";
 		let cars = [];
 
-		const handleSubmit = async event => {
-			$$invalidate(2, cars = []);
-			event.preventDefault();
-			const response = await searchCars(make, model);
+		const handleSubmit = async () => {
+			//event.preventDefault();
+			const result = await searchCars(make, model);
+
+			$$invalidate(2, cars = result);
 			$$invalidate(0, make = "");
 			$$invalidate(1, model = "");
 
 			// send data to the api
 			open = false;
 
-			console.log(response);
+			console.log(cars);
 		};
+
+		onMount(async () => {
+			// Optionally fetch all cars on mount
+			$$invalidate(2, cars = await searchCars("", "")); // Fetch all cars initially
+
+			console.log(cars); // Log initial data
+		});
 
 		const writable_props = [];
 
@@ -16873,6 +16881,7 @@ var app = (function () {
 			searchCars,
 			EditAction,
 			DeleteAction,
+			onMount,
 			make,
 			model,
 			cars,

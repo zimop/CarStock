@@ -3,20 +3,28 @@
     import { searchCars } from './../api/api.js';
     import EditAction from './EditAction.svelte';
     import DeleteAction from './DeleteAction.svelte';
+  import { onMount } from 'svelte';
     let make = ""
     let model = ""
     let cars = []
 
-    const handleSubmit = async (event) => {
-        cars = []
-        event.preventDefault();
-        const response = await searchCars(make, model);
+    const handleSubmit = async () => {
+        //event.preventDefault();
+        const result = await searchCars(make, model);
+        cars = result;
         make = "";
         model = "";
         // send data to the api
         open = false;
-        console.log(response);
+        console.log(cars);
     }
+
+    onMount(async () => {
+        // Optionally fetch all cars on mount
+        cars = await searchCars("", ""); // Fetch all cars initially
+        console.log(cars); // Log initial data
+    });
+    
 </script>
 
 <div>

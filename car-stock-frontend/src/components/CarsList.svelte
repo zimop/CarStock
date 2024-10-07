@@ -3,6 +3,7 @@
     import { fetchCars } from '../api/api'
     import { Table, Button } from '@sveltestrap/sveltestrap';
     import DeleteAction from './DeleteAction.svelte';
+    import EditAction from './EditAction.svelte';
     
     let cars = []
     onMount(async () => {
@@ -31,7 +32,7 @@
         <td>{car.year}</td>
         <td>{car.stockLevel}</td>
         <td>
-            <Button color="primary">Edit</Button>
+            <EditAction make = {car.make} model = {car.model} year = {parseInt(car.year, 10)} stocklevel = {car.stockLevel}></EditAction>
             <DeleteAction make = {car.make} model = {car.model} year = {parseInt(car.year, 10)}/>
         </td>
       </tr>

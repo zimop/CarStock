@@ -29,3 +29,12 @@ export const deleteCar = async (id) => {
     const response = await axios.delete(`${API_URL}/${id}`);
     return response.data;
 }
+
+export const updateStockLevels = async (id, stockLevel) => {
+    const response = await axios.put(`${API_URL}/${id}`, stockLevel, {
+        headers: {
+        'Content-Type': 'application/json'
+        }
+    });
+    return response.data;
+}

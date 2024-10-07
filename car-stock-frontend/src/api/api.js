@@ -14,7 +14,7 @@ export const addCar = async (car) => {
 }
 
 export const fetchCarId = async (make, model, year) => {
-    const response = await axios.get(`${API_URL}/search`, {
+    const response = await axios.get(`${API_URL}/searchById`, {
         params:{
             make,
             model,
@@ -36,5 +36,18 @@ export const updateStockLevels = async (id, stockLevel) => {
         'Content-Type': 'application/json'
         }
     });
+    return response.data;
+}
+
+export const searchCars = async (make, model) => {
+    console.log(make)
+    console.log(model)
+    const response = await axios.get(`${API_URL}/search`,{
+        params:{
+            make,
+            model,
+        }
+    })
+    console.log(response.data)
     return response.data;
 }

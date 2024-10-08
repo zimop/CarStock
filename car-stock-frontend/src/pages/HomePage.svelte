@@ -1,4 +1,5 @@
 <script>
+	  import LoginPage from './LoginPage.svelte';
     import CarsList from '../components/CarsList.svelte';
     import { Table } from '@sveltestrap/sveltestrap';
     import AddUsersForm from '../components/AddUsersForm.svelte';
@@ -6,6 +7,7 @@
 </script>
 
 <div>
+  <LoginPage/>
   <h1>Car Stock Management System</h1>
   <SearchBar/>
 </div>

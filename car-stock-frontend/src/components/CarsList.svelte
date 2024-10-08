@@ -5,6 +5,7 @@
     import EditAction from './EditAction.svelte';
 
     export let cars = [];
+    export let getCars;
 
 </script>
 
@@ -26,8 +27,8 @@
         <td>{car.year}</td>
         <td>{car.stockLevel}</td>
         <td>
-            <EditAction make = {car.make} model = {car.model} year = {parseInt(car.year, 10)} stocklevel = {car.stockLevel}></EditAction>
-            <DeleteAction make = {car.make} model = {car.model} year = {parseInt(car.year, 10)}/>
+            <EditAction make = {car.make} model = {car.model} year = {parseInt(car.year, 10)} stocklevel = {car.stockLevel} getCars = {getCars}></EditAction>
+            <DeleteAction make = {car.make} model = {car.model} year = {parseInt(car.year, 10)} getCars = {getCars}/>
         </td>
       </tr>
       {/each}

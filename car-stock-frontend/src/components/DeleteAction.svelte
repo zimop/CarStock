@@ -7,14 +7,17 @@
     export let model;
     export let year;
 
+    export let getCars;
+
     const handleDelete = async (event) => {
         event.preventDefault();
         const carId = await fetchCarId(make, model, parseInt(year));
         console.log(carId);
         const response = await deleteCar(carId);
+        getCars();
         console.log(response);
         // send data to the api
     }
 </script>
 
-<Button color="danger" on:click= {handleDelete}>Delete</Button>
+<Button color="danger" on:click= {handleDelete} size = "lg">Delete</Button>

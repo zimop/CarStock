@@ -1,8 +1,6 @@
 <script>
     import { InputGroup, InputGroupText, Input, Button, Table } from '@sveltestrap/sveltestrap';
     import { searchCars } from './../api/api.js';
-    import EditAction from './EditAction.svelte';
-    import DeleteAction from './DeleteAction.svelte';
     import { fetchCars } from '../api/api'
     import { onMount } from 'svelte';
     import AddUsersForm from './AddUsersForm.svelte';
@@ -61,7 +59,7 @@
     </div>
 </div>
 <div>
-    <CarsList cars = {cars}/>
+    <CarsList cars = {cars} getCars = {getCars}/>
 </div>
 
 <style>

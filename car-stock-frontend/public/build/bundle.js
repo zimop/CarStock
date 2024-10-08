@@ -1915,7 +1915,7 @@ var app = (function () {
 	}
 
 	// (106:0) {#if href}
-	function create_if_block$8(ctx) {
+	function create_if_block$9(ctx) {
 		let a;
 		let current_block_type_index;
 		let if_block;
@@ -2027,7 +2027,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block: block_1,
-			id: create_if_block$8.name,
+			id: create_if_block$9.name,
 			type: "if",
 			source: "(106:0) {#if href}",
 			ctx
@@ -2308,7 +2308,7 @@ var app = (function () {
 		let if_block;
 		let if_block_anchor;
 		let current;
-		const if_block_creators = [create_if_block$8, create_else_block_1$1];
+		const if_block_creators = [create_if_block$9, create_else_block_1$1];
 		const if_blocks = [];
 
 		function select_block_type(ctx, dirty) {
@@ -2919,7 +2919,7 @@ var app = (function () {
 	}
 
 	// (85:2) {#if label}
-	function create_if_block$7(ctx) {
+	function create_if_block$8(ctx) {
 		let label_1;
 		let current;
 		const label_slot_template = /*#slots*/ ctx[20].label;
@@ -2987,7 +2987,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$7.name,
+			id: create_if_block$8.name,
 			type: "if",
 			source: "(85:2) {#if label}",
 			ctx
@@ -3041,7 +3041,7 @@ var app = (function () {
 
 		let current_block_type = select_block_type(ctx);
 		let if_block0 = current_block_type(ctx);
-		let if_block1 = /*label*/ ctx[4] && create_if_block$7(ctx);
+		let if_block1 = /*label*/ ctx[4] && create_if_block$8(ctx);
 
 		const block = {
 			c: function create() {
@@ -3083,7 +3083,7 @@ var app = (function () {
 							transition_in(if_block1, 1);
 						}
 					} else {
-						if_block1 = create_if_block$7(ctx);
+						if_block1 = create_if_block$8(ctx);
 						if_block1.c();
 						transition_in(if_block1, 1);
 						if_block1.m(div, null);
@@ -4873,7 +4873,7 @@ var app = (function () {
 	}
 
 	// (473:0) {#if feedback}
-	function create_if_block$6(ctx) {
+	function create_if_block$7(ctx) {
 		let show_if;
 		let current_block_type_index;
 		let if_block;
@@ -4949,7 +4949,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$6.name,
+			id: create_if_block$7.name,
 			type: "if",
 			source: "(473:0) {#if feedback}",
 			ctx
@@ -5256,7 +5256,7 @@ var app = (function () {
 			if_block0 = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
 		}
 
-		let if_block1 = /*feedback*/ ctx[9] && create_if_block$6(ctx);
+		let if_block1 = /*feedback*/ ctx[9] && create_if_block$7(ctx);
 
 		const block = {
 			c: function create() {
@@ -5322,7 +5322,7 @@ var app = (function () {
 							transition_in(if_block1, 1);
 						}
 					} else {
-						if_block1 = create_if_block$6(ctx);
+						if_block1 = create_if_block$7(ctx);
 						if_block1.c();
 						transition_in(if_block1, 1);
 						if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -6711,7 +6711,7 @@ var app = (function () {
 	const file$f = "node_modules\\@sveltestrap\\sveltestrap\\dist\\ModalBackdrop\\ModalBackdrop.svelte";
 
 	// (21:0) {#if isOpen && loaded}
-	function create_if_block$5(ctx) {
+	function create_if_block$6(ctx) {
 		let div;
 		let div_intro;
 		let div_outro;
@@ -6792,7 +6792,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$5.name,
+			id: create_if_block$6.name,
 			type: "if",
 			source: "(21:0) {#if isOpen && loaded}",
 			ctx
@@ -6803,7 +6803,7 @@ var app = (function () {
 
 	function create_fragment$g(ctx) {
 		let if_block_anchor;
-		let if_block = /*isOpen*/ ctx[0] && /*loaded*/ ctx[2] && create_if_block$5(ctx);
+		let if_block = /*isOpen*/ ctx[0] && /*loaded*/ ctx[2] && create_if_block$6(ctx);
 
 		const block = {
 			c: function create() {
@@ -6826,7 +6826,7 @@ var app = (function () {
 							transition_in(if_block, 1);
 						}
 					} else {
-						if_block = create_if_block$5(ctx);
+						if_block = create_if_block$6(ctx);
 						if_block.c();
 						transition_in(if_block, 1);
 						if_block.m(if_block_anchor.parentNode, if_block_anchor);
@@ -7204,7 +7204,7 @@ var app = (function () {
 	}
 
 	// (43:4) {#if typeof toggle === 'function'}
-	function create_if_block$4(ctx) {
+	function create_if_block$5(ctx) {
 		let button;
 		let mounted;
 		let dispose;
@@ -7255,7 +7255,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$4.name,
+			id: create_if_block$5.name,
 			type: "if",
 			source: "(43:4) {#if typeof toggle === 'function'}",
 			ctx
@@ -7267,7 +7267,7 @@ var app = (function () {
 	// (42:21)      
 	function fallback_block(ctx) {
 		let if_block_anchor;
-		let if_block = typeof /*toggle*/ ctx[0] === 'function' && create_if_block$4(ctx);
+		let if_block = typeof /*toggle*/ ctx[0] === 'function' && create_if_block$5(ctx);
 
 		const block = {
 			c: function create() {
@@ -7283,7 +7283,7 @@ var app = (function () {
 					if (if_block) {
 						if_block.p(ctx, dirty);
 					} else {
-						if_block = create_if_block$4(ctx);
+						if_block = create_if_block$5(ctx);
 						if_block.c();
 						if_block.m(if_block_anchor.parentNode, if_block_anchor);
 					}
@@ -8397,7 +8397,7 @@ var app = (function () {
 	}
 
 	// (369:0) {#if backdrop && !staticModal}
-	function create_if_block$3(ctx) {
+	function create_if_block$4(ctx) {
 		let switch_instance;
 		let switch_instance_anchor;
 		let current;
@@ -8478,7 +8478,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$3.name,
+			id: create_if_block$4.name,
 			type: "if",
 			source: "(369:0) {#if backdrop && !staticModal}",
 			ctx
@@ -8544,7 +8544,7 @@ var app = (function () {
 		let if_block1_anchor;
 		let current;
 		let if_block0 = /*_isMounted*/ ctx[13] && create_if_block_1$1(ctx);
-		let if_block1 = /*backdrop*/ ctx[4] && !/*staticModal*/ ctx[0] && create_if_block$3(ctx);
+		let if_block1 = /*backdrop*/ ctx[4] && !/*staticModal*/ ctx[0] && create_if_block$4(ctx);
 
 		const block = {
 			c: function create() {
@@ -8595,7 +8595,7 @@ var app = (function () {
 							transition_in(if_block1, 1);
 						}
 					} else {
-						if_block1 = create_if_block$3(ctx);
+						if_block1 = create_if_block$4(ctx);
 						if_block1.c();
 						transition_in(if_block1, 1);
 						if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
@@ -9435,7 +9435,7 @@ var app = (function () {
 	}
 
 	// (14:0) {#if responsive}
-	function create_if_block$2(ctx) {
+	function create_if_block$3(ctx) {
 		let div;
 		let current;
 		const default_slot_template = /*#slots*/ ctx[4].default;
@@ -9497,7 +9497,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$2.name,
+			id: create_if_block$3.name,
 			type: "if",
 			source: "(14:0) {#if responsive}",
 			ctx
@@ -9511,7 +9511,7 @@ var app = (function () {
 		let if_block;
 		let if_block_anchor;
 		let current;
-		const if_block_creators = [create_if_block$2, create_else_block$1];
+		const if_block_creators = [create_if_block$3, create_else_block$1];
 		const if_blocks = [];
 
 		function select_block_type(ctx, dirty) {
@@ -9971,7 +9971,7 @@ var app = (function () {
 	}
 
 	// (71:4) {#if rows}
-	function create_if_block$1(ctx) {
+	function create_if_block$2(ctx) {
 		let colgroup;
 		let t0;
 		let tableheader;
@@ -10141,7 +10141,7 @@ var app = (function () {
 
 		dispatch_dev("SvelteRegisterBlock", {
 			block,
-			id: create_if_block$1.name,
+			id: create_if_block$2.name,
 			type: "if",
 			source: "(71:4) {#if rows}",
 			ctx
@@ -10400,7 +10400,7 @@ var app = (function () {
 		let current_block_type_index;
 		let if_block;
 		let current;
-		const if_block_creators = [create_if_block$1, create_else_block];
+		const if_block_creators = [create_if_block$2, create_else_block];
 		const if_blocks = [];
 
 		function select_block_type(ctx, dirty) {
@@ -14559,7 +14559,7 @@ var app = (function () {
 
 	const { console: console_1$2 } = globals;
 
-	// (20:0) <Button color="danger" on:click= {handleDelete}>
+	// (23:0) <Button color="danger" on:click= {handleDelete} size = "lg">
 	function create_default_slot$4(ctx) {
 		let t;
 
@@ -14581,7 +14581,7 @@ var app = (function () {
 			block,
 			id: create_default_slot$4.name,
 			type: "slot",
-			source: "(20:0) <Button color=\\\"danger\\\" on:click= {handleDelete}>",
+			source: "(23:0) <Button color=\\\"danger\\\" on:click= {handleDelete} size = \\\"lg\\\">",
 			ctx
 		});
 
@@ -14595,6 +14595,7 @@ var app = (function () {
 		button = new Button({
 				props: {
 					color: "danger",
+					size: "lg",
 					$$slots: { default: [create_default_slot$4] },
 					$$scope: { ctx }
 				},
@@ -14617,7 +14618,7 @@ var app = (function () {
 			p: function update(ctx, [dirty]) {
 				const button_changes = {};
 
-				if (dirty & /*$$scope*/ 16) {
+				if (dirty & /*$$scope*/ 32) {
 					button_changes.$$scope = { dirty, ctx };
 				}
 
@@ -14654,12 +14655,14 @@ var app = (function () {
 		let { make } = $$props;
 		let { model } = $$props;
 		let { year } = $$props;
+		let { getCars } = $$props;
 
 		const handleDelete = async event => {
 			event.preventDefault();
 			const carId = await fetchCarId(make, model, parseInt(year));
 			console.log(carId);
 			const response = await deleteCar(carId);
+			getCars();
 			console.log(response);
 		}; // send data to the api
 
@@ -14675,9 +14678,13 @@ var app = (function () {
 			if (year === undefined && !('year' in $$props || $$self.$$.bound[$$self.$$.props['year']])) {
 				console_1$2.warn("<DeleteAction> was created without expected prop 'year'");
 			}
+
+			if (getCars === undefined && !('getCars' in $$props || $$self.$$.bound[$$self.$$.props['getCars']])) {
+				console_1$2.warn("<DeleteAction> was created without expected prop 'getCars'");
+			}
 		});
 
-		const writable_props = ['make', 'model', 'year'];
+		const writable_props = ['make', 'model', 'year', 'getCars'];
 
 		Object.keys($$props).forEach(key => {
 			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$2.warn(`<DeleteAction> was created with unknown prop '${key}'`);
@@ -14687,6 +14694,7 @@ var app = (function () {
 			if ('make' in $$props) $$invalidate(1, make = $$props.make);
 			if ('model' in $$props) $$invalidate(2, model = $$props.model);
 			if ('year' in $$props) $$invalidate(3, year = $$props.year);
+			if ('getCars' in $$props) $$invalidate(4, getCars = $$props.getCars);
 		};
 
 		$$self.$capture_state = () => ({
@@ -14696,6 +14704,7 @@ var app = (function () {
 			make,
 			model,
 			year,
+			getCars,
 			handleDelete
 		});
 
@@ -14703,19 +14712,20 @@ var app = (function () {
 			if ('make' in $$props) $$invalidate(1, make = $$props.make);
 			if ('model' in $$props) $$invalidate(2, model = $$props.model);
 			if ('year' in $$props) $$invalidate(3, year = $$props.year);
+			if ('getCars' in $$props) $$invalidate(4, getCars = $$props.getCars);
 		};
 
 		if ($$props && "$$inject" in $$props) {
 			$$self.$inject_state($$props.$$inject);
 		}
 
-		return [handleDelete, make, model, year];
+		return [handleDelete, make, model, year, getCars];
 	}
 
 	class DeleteAction extends SvelteComponentDev {
 		constructor(options) {
 			super(options);
-			init(this, options, instance$6, create_fragment$6, safe_not_equal, { make: 1, model: 2, year: 3 });
+			init(this, options, instance$6, create_fragment$6, safe_not_equal, { make: 1, model: 2, year: 3, getCars: 4 });
 
 			dispatch_dev("SvelteRegisterComponent", {
 				component: this,
@@ -14748,6 +14758,14 @@ var app = (function () {
 		set year(value) {
 			throw new Error("<DeleteAction>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
 		}
+
+		get getCars() {
+			throw new Error("<DeleteAction>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set getCars(value) {
+			throw new Error("<DeleteAction>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
 	}
 
 	/* src\components\EditAction.svelte generated by Svelte v4.2.19 */
@@ -14755,7 +14773,7 @@ var app = (function () {
 	const { console: console_1$1 } = globals;
 	const file$5 = "src\\components\\EditAction.svelte";
 
-	// (25:0) <Button color="primary" on:click= {toggle}>
+	// (44:0) <Button color="primary" on:click= {toggle} size = "lg">
 	function create_default_slot_2$2(ctx) {
 		let t;
 
@@ -14777,14 +14795,51 @@ var app = (function () {
 			block,
 			id: create_default_slot_2$2.name,
 			type: "slot",
-			source: "(25:0) <Button color=\\\"primary\\\" on:click= {toggle}>",
+			source: "(44:0) <Button color=\\\"primary\\\" on:click= {toggle} size = \\\"lg\\\">",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (32:8) <Button on:click = {handleEdit} color="primary">
+	// (50:12) {#if error}
+	function create_if_block$1(ctx) {
+		let span;
+		let t;
+
+		const block = {
+			c: function create() {
+				span = element("span");
+				t = text(/*error*/ ctx[1]);
+				attr_dev(span, "class", "error svelte-ins59m");
+				add_location(span, file$5, 50, 16, 1541);
+			},
+			m: function mount(target, anchor) {
+				insert_dev(target, span, anchor);
+				append_dev(span, t);
+			},
+			p: function update(ctx, dirty) {
+				if (dirty & /*error*/ 2) set_data_dev(t, /*error*/ ctx[1]);
+			},
+			d: function destroy(detaching) {
+				if (detaching) {
+					detach_dev(span);
+				}
+			}
+		};
+
+		dispatch_dev("SvelteRegisterBlock", {
+			block,
+			id: create_if_block$1.name,
+			type: "if",
+			source: "(50:12) {#if error}",
+			ctx
+		});
+
+		return block;
+	}
+
+	// (55:12) <Button on:click = {handleEdit} color="primary" >
 	function create_default_slot_1$2(ctx) {
 		let t;
 
@@ -14806,27 +14861,29 @@ var app = (function () {
 			block,
 			id: create_default_slot_1$2.name,
 			type: "slot",
-			source: "(32:8) <Button on:click = {handleEdit} color=\\\"primary\\\">",
+			source: "(55:12) <Button on:click = {handleEdit} color=\\\"primary\\\" >",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (26:0) <Modal body header="Edit stock levels" isOpen={open} {toggle}>
+	// (45:0) <Modal body header="Edit stock levels" isOpen={open} {toggle}>
 	function create_default_slot$3(ctx) {
-		let div1;
+		let div2;
 		let div0;
 		let span;
 		let t1;
 		let input;
 		let updating_value;
 		let t2;
+		let t3;
+		let div1;
 		let button;
 		let current;
 
 		function input_value_binding(value) {
-			/*input_value_binding*/ ctx[7](value);
+			/*input_value_binding*/ ctx[9](value);
 		}
 
 		let input_props = { type: "email", placeholder: "make" };
@@ -14837,6 +14894,7 @@ var app = (function () {
 
 		input = new Input({ props: input_props, $$inline: true });
 		binding_callbacks.push(() => bind$1(input, 'value', input_value_binding));
+		let if_block = /*error*/ ctx[1] && create_if_block$1(ctx);
 
 		button = new Button({
 				props: {
@@ -14847,30 +14905,38 @@ var app = (function () {
 				$$inline: true
 			});
 
-		button.$on("click", /*handleEdit*/ ctx[3]);
+		button.$on("click", /*handleEdit*/ ctx[4]);
 
 		const block = {
 			c: function create() {
-				div1 = element("div");
+				div2 = element("div");
 				div0 = element("div");
 				span = element("span");
 				span.textContent = "Stock Level:";
 				t1 = space();
 				create_component(input.$$.fragment);
 				t2 = space();
+				if (if_block) if_block.c();
+				t3 = space();
+				div1 = element("div");
 				create_component(button.$$.fragment);
-				add_location(span, file$5, 28, 12, 914);
-				attr_dev(div0, "class", "make");
-				add_location(div0, file$5, 27, 8, 880);
-				add_location(div1, file$5, 26, 4, 865);
+				add_location(span, file$5, 47, 12, 1393);
+				attr_dev(div0, "class", "make svelte-ins59m");
+				add_location(div0, file$5, 46, 8, 1359);
+				attr_dev(div1, "class", "button svelte-ins59m");
+				add_location(div1, file$5, 53, 8, 1622);
+				add_location(div2, file$5, 45, 4, 1344);
 			},
 			m: function mount(target, anchor) {
-				insert_dev(target, div1, anchor);
-				append_dev(div1, div0);
+				insert_dev(target, div2, anchor);
+				append_dev(div2, div0);
 				append_dev(div0, span);
 				append_dev(div0, t1);
 				mount_component(input, div0, null);
-				append_dev(div1, t2);
+				append_dev(div0, t2);
+				if (if_block) if_block.m(div0, null);
+				append_dev(div2, t3);
+				append_dev(div2, div1);
 				mount_component(button, div1, null);
 				current = true;
 			},
@@ -14884,9 +14950,23 @@ var app = (function () {
 				}
 
 				input.$set(input_changes);
+
+				if (/*error*/ ctx[1]) {
+					if (if_block) {
+						if_block.p(ctx, dirty);
+					} else {
+						if_block = create_if_block$1(ctx);
+						if_block.c();
+						if_block.m(div0, null);
+					}
+				} else if (if_block) {
+					if_block.d(1);
+					if_block = null;
+				}
+
 				const button_changes = {};
 
-				if (dirty & /*$$scope*/ 256) {
+				if (dirty & /*$$scope*/ 2048) {
 					button_changes.$$scope = { dirty, ctx };
 				}
 
@@ -14905,10 +14985,11 @@ var app = (function () {
 			},
 			d: function destroy(detaching) {
 				if (detaching) {
-					detach_dev(div1);
+					detach_dev(div2);
 				}
 
 				destroy_component(input);
+				if (if_block) if_block.d();
 				destroy_component(button);
 			}
 		};
@@ -14917,7 +14998,7 @@ var app = (function () {
 			block,
 			id: create_default_slot$3.name,
 			type: "slot",
-			source: "(26:0) <Modal body header=\\\"Edit stock levels\\\" isOpen={open} {toggle}>",
+			source: "(45:0) <Modal body header=\\\"Edit stock levels\\\" isOpen={open} {toggle}>",
 			ctx
 		});
 
@@ -14933,20 +15014,21 @@ var app = (function () {
 		button = new Button({
 				props: {
 					color: "primary",
+					size: "lg",
 					$$slots: { default: [create_default_slot_2$2] },
 					$$scope: { ctx }
 				},
 				$$inline: true
 			});
 
-		button.$on("click", /*toggle*/ ctx[2]);
+		button.$on("click", /*toggle*/ ctx[3]);
 
 		modal = new Modal({
 				props: {
 					body: true,
 					header: "Edit stock levels",
-					isOpen: /*open*/ ctx[1],
-					toggle: /*toggle*/ ctx[2],
+					isOpen: /*open*/ ctx[2],
+					toggle: /*toggle*/ ctx[3],
 					$$slots: { default: [create_default_slot$3] },
 					$$scope: { ctx }
 				},
@@ -14971,15 +15053,15 @@ var app = (function () {
 			p: function update(ctx, [dirty]) {
 				const button_changes = {};
 
-				if (dirty & /*$$scope*/ 256) {
+				if (dirty & /*$$scope*/ 2048) {
 					button_changes.$$scope = { dirty, ctx };
 				}
 
 				button.$set(button_changes);
 				const modal_changes = {};
-				if (dirty & /*open*/ 2) modal_changes.isOpen = /*open*/ ctx[1];
+				if (dirty & /*open*/ 4) modal_changes.isOpen = /*open*/ ctx[2];
 
-				if (dirty & /*$$scope, stocklevel*/ 257) {
+				if (dirty & /*$$scope, error, stocklevel*/ 2051) {
 					modal_changes.$$scope = { dirty, ctx };
 				}
 
@@ -15024,15 +15106,35 @@ var app = (function () {
 		let { make } = $$props;
 		let { model } = $$props;
 		let { year } = $$props;
+		let { getCars } = $$props;
+		let error = '';
 		let open = false;
-		const toggle = () => $$invalidate(1, open = !open);
+		const toggle = () => $$invalidate(2, open = !open);
+
+		const validateStock = () => {
+			let isValid = true;
+			const stock = parseInt(stocklevel);
+			$$invalidate(1, error = '');
+
+			if (isNaN(stock) || stock < 0) {
+				$$invalidate(1, error = 'Please enter a valid stock number');
+				isValid = false;
+			}
+
+			return isValid;
+		};
 
 		const handleEdit = async event => {
 			event.preventDefault();
-			const carId = await fetchCarId(make, model, parseInt(year));
-			console.log(carId);
-			const response = await updateStockLevels(carId, stocklevel);
-			console.log(response);
+
+			if (validateStock()) {
+				const carId = await fetchCarId(make, model, parseInt(year));
+				console.log(carId);
+				const response = await updateStockLevels(carId, stocklevel);
+				getCars();
+				$$invalidate(2, open = !open);
+				console.log(response);
+			}
 		}; // send data to the api
 
 		$$self.$$.on_mount.push(function () {
@@ -15051,9 +15153,13 @@ var app = (function () {
 			if (year === undefined && !('year' in $$props || $$self.$$.bound[$$self.$$.props['year']])) {
 				console_1$1.warn("<EditAction> was created without expected prop 'year'");
 			}
+
+			if (getCars === undefined && !('getCars' in $$props || $$self.$$.bound[$$self.$$.props['getCars']])) {
+				console_1$1.warn("<EditAction> was created without expected prop 'getCars'");
+			}
 		});
 
-		const writable_props = ['stocklevel', 'make', 'model', 'year'];
+		const writable_props = ['stocklevel', 'make', 'model', 'year', 'getCars'];
 
 		Object.keys($$props).forEach(key => {
 			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$1.warn(`<EditAction> was created with unknown prop '${key}'`);
@@ -15066,9 +15172,10 @@ var app = (function () {
 
 		$$self.$$set = $$props => {
 			if ('stocklevel' in $$props) $$invalidate(0, stocklevel = $$props.stocklevel);
-			if ('make' in $$props) $$invalidate(4, make = $$props.make);
-			if ('model' in $$props) $$invalidate(5, model = $$props.model);
-			if ('year' in $$props) $$invalidate(6, year = $$props.year);
+			if ('make' in $$props) $$invalidate(5, make = $$props.make);
+			if ('model' in $$props) $$invalidate(6, model = $$props.model);
+			if ('year' in $$props) $$invalidate(7, year = $$props.year);
+			if ('getCars' in $$props) $$invalidate(8, getCars = $$props.getCars);
 		};
 
 		$$self.$capture_state = () => ({
@@ -15082,24 +15189,40 @@ var app = (function () {
 			make,
 			model,
 			year,
+			getCars,
+			error,
 			open,
 			toggle,
+			validateStock,
 			handleEdit
 		});
 
 		$$self.$inject_state = $$props => {
 			if ('stocklevel' in $$props) $$invalidate(0, stocklevel = $$props.stocklevel);
-			if ('make' in $$props) $$invalidate(4, make = $$props.make);
-			if ('model' in $$props) $$invalidate(5, model = $$props.model);
-			if ('year' in $$props) $$invalidate(6, year = $$props.year);
-			if ('open' in $$props) $$invalidate(1, open = $$props.open);
+			if ('make' in $$props) $$invalidate(5, make = $$props.make);
+			if ('model' in $$props) $$invalidate(6, model = $$props.model);
+			if ('year' in $$props) $$invalidate(7, year = $$props.year);
+			if ('getCars' in $$props) $$invalidate(8, getCars = $$props.getCars);
+			if ('error' in $$props) $$invalidate(1, error = $$props.error);
+			if ('open' in $$props) $$invalidate(2, open = $$props.open);
 		};
 
 		if ($$props && "$$inject" in $$props) {
 			$$self.$inject_state($$props.$$inject);
 		}
 
-		return [stocklevel, open, toggle, handleEdit, make, model, year, input_value_binding];
+		return [
+			stocklevel,
+			error,
+			open,
+			toggle,
+			handleEdit,
+			make,
+			model,
+			year,
+			getCars,
+			input_value_binding
+		];
 	}
 
 	class EditAction extends SvelteComponentDev {
@@ -15108,9 +15231,10 @@ var app = (function () {
 
 			init(this, options, instance$5, create_fragment$5, safe_not_equal, {
 				stocklevel: 0,
-				make: 4,
-				model: 5,
-				year: 6
+				make: 5,
+				model: 6,
+				year: 7,
+				getCars: 8
 			});
 
 			dispatch_dev("SvelteRegisterComponent", {
@@ -15152,6 +15276,14 @@ var app = (function () {
 		set year(value) {
 			throw new Error("<EditAction>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
 		}
+
+		get getCars() {
+			throw new Error("<EditAction>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set getCars(value) {
+			throw new Error("<EditAction>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
 	}
 
 	/* src\components\CarsList.svelte generated by Svelte v4.2.19 */
@@ -15159,27 +15291,27 @@ var app = (function () {
 
 	function get_each_context(ctx, list, i) {
 		const child_ctx = ctx.slice();
-		child_ctx[1] = list[i];
+		child_ctx[2] = list[i];
 		return child_ctx;
 	}
 
-	// (22:6) {#each cars as car}
+	// (23:6) {#each cars as car}
 	function create_each_block(ctx) {
 		let tr;
 		let td0;
-		let t0_value = /*car*/ ctx[1].make + "";
+		let t0_value = /*car*/ ctx[2].make + "";
 		let t0;
 		let t1;
 		let td1;
-		let t2_value = /*car*/ ctx[1].model + "";
+		let t2_value = /*car*/ ctx[2].model + "";
 		let t2;
 		let t3;
 		let td2;
-		let t4_value = /*car*/ ctx[1].year + "";
+		let t4_value = /*car*/ ctx[2].year + "";
 		let t4;
 		let t5;
 		let td3;
-		let t6_value = /*car*/ ctx[1].stockLevel + "";
+		let t6_value = /*car*/ ctx[2].stockLevel + "";
 		let t6;
 		let t7;
 		let td4;
@@ -15191,19 +15323,21 @@ var app = (function () {
 
 		editaction = new EditAction({
 				props: {
-					make: /*car*/ ctx[1].make,
-					model: /*car*/ ctx[1].model,
-					year: parseInt(/*car*/ ctx[1].year, 10),
-					stocklevel: /*car*/ ctx[1].stockLevel
+					make: /*car*/ ctx[2].make,
+					model: /*car*/ ctx[2].model,
+					year: parseInt(/*car*/ ctx[2].year, 10),
+					stocklevel: /*car*/ ctx[2].stockLevel,
+					getCars: /*getCars*/ ctx[1]
 				},
 				$$inline: true
 			});
 
 		deleteaction = new DeleteAction({
 				props: {
-					make: /*car*/ ctx[1].make,
-					model: /*car*/ ctx[1].model,
-					year: parseInt(/*car*/ ctx[1].year, 10)
+					make: /*car*/ ctx[2].make,
+					model: /*car*/ ctx[2].model,
+					year: parseInt(/*car*/ ctx[2].year, 10),
+					getCars: /*getCars*/ ctx[1]
 				},
 				$$inline: true
 			});
@@ -15228,12 +15362,12 @@ var app = (function () {
 				t8 = space();
 				create_component(deleteaction.$$.fragment);
 				t9 = space();
-				add_location(td0, file$4, 23, 8, 481);
-				add_location(td1, file$4, 24, 8, 510);
-				add_location(td2, file$4, 25, 8, 540);
-				add_location(td3, file$4, 26, 8, 569);
-				add_location(td4, file$4, 27, 8, 604);
-				add_location(tr, file$4, 22, 6, 467);
+				add_location(td0, file$4, 24, 8, 506);
+				add_location(td1, file$4, 25, 8, 535);
+				add_location(td2, file$4, 26, 8, 565);
+				add_location(td3, file$4, 27, 8, 594);
+				add_location(td4, file$4, 28, 8, 629);
+				add_location(tr, file$4, 23, 6, 492);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, tr, anchor);
@@ -15257,20 +15391,22 @@ var app = (function () {
 				current = true;
 			},
 			p: function update(ctx, dirty) {
-				if ((!current || dirty & /*cars*/ 1) && t0_value !== (t0_value = /*car*/ ctx[1].make + "")) set_data_dev(t0, t0_value);
-				if ((!current || dirty & /*cars*/ 1) && t2_value !== (t2_value = /*car*/ ctx[1].model + "")) set_data_dev(t2, t2_value);
-				if ((!current || dirty & /*cars*/ 1) && t4_value !== (t4_value = /*car*/ ctx[1].year + "")) set_data_dev(t4, t4_value);
-				if ((!current || dirty & /*cars*/ 1) && t6_value !== (t6_value = /*car*/ ctx[1].stockLevel + "")) set_data_dev(t6, t6_value);
+				if ((!current || dirty & /*cars*/ 1) && t0_value !== (t0_value = /*car*/ ctx[2].make + "")) set_data_dev(t0, t0_value);
+				if ((!current || dirty & /*cars*/ 1) && t2_value !== (t2_value = /*car*/ ctx[2].model + "")) set_data_dev(t2, t2_value);
+				if ((!current || dirty & /*cars*/ 1) && t4_value !== (t4_value = /*car*/ ctx[2].year + "")) set_data_dev(t4, t4_value);
+				if ((!current || dirty & /*cars*/ 1) && t6_value !== (t6_value = /*car*/ ctx[2].stockLevel + "")) set_data_dev(t6, t6_value);
 				const editaction_changes = {};
-				if (dirty & /*cars*/ 1) editaction_changes.make = /*car*/ ctx[1].make;
-				if (dirty & /*cars*/ 1) editaction_changes.model = /*car*/ ctx[1].model;
-				if (dirty & /*cars*/ 1) editaction_changes.year = parseInt(/*car*/ ctx[1].year, 10);
-				if (dirty & /*cars*/ 1) editaction_changes.stocklevel = /*car*/ ctx[1].stockLevel;
+				if (dirty & /*cars*/ 1) editaction_changes.make = /*car*/ ctx[2].make;
+				if (dirty & /*cars*/ 1) editaction_changes.model = /*car*/ ctx[2].model;
+				if (dirty & /*cars*/ 1) editaction_changes.year = parseInt(/*car*/ ctx[2].year, 10);
+				if (dirty & /*cars*/ 1) editaction_changes.stocklevel = /*car*/ ctx[2].stockLevel;
+				if (dirty & /*getCars*/ 2) editaction_changes.getCars = /*getCars*/ ctx[1];
 				editaction.$set(editaction_changes);
 				const deleteaction_changes = {};
-				if (dirty & /*cars*/ 1) deleteaction_changes.make = /*car*/ ctx[1].make;
-				if (dirty & /*cars*/ 1) deleteaction_changes.model = /*car*/ ctx[1].model;
-				if (dirty & /*cars*/ 1) deleteaction_changes.year = parseInt(/*car*/ ctx[1].year, 10);
+				if (dirty & /*cars*/ 1) deleteaction_changes.make = /*car*/ ctx[2].make;
+				if (dirty & /*cars*/ 1) deleteaction_changes.model = /*car*/ ctx[2].model;
+				if (dirty & /*cars*/ 1) deleteaction_changes.year = parseInt(/*car*/ ctx[2].year, 10);
+				if (dirty & /*getCars*/ 2) deleteaction_changes.getCars = /*getCars*/ ctx[1];
 				deleteaction.$set(deleteaction_changes);
 			},
 			i: function intro(local) {
@@ -15298,14 +15434,14 @@ var app = (function () {
 			block,
 			id: create_each_block.name,
 			type: "each",
-			source: "(22:6) {#each cars as car}",
+			source: "(23:6) {#each cars as car}",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (11:0) <Table bordered>
+	// (12:0) <Table bordered>
 	function create_default_slot$2(ctx) {
 		let thead;
 		let tr;
@@ -15357,14 +15493,14 @@ var app = (function () {
 					each_blocks[i].c();
 				}
 
-				add_location(th0, file$4, 13, 8, 276);
-				add_location(th1, file$4, 14, 8, 299);
-				add_location(th2, file$4, 15, 8, 323);
-				add_location(th3, file$4, 16, 8, 346);
-				add_location(th4, file$4, 17, 8, 376);
-				add_location(tr, file$4, 12, 6, 262);
-				add_location(thead, file$4, 11, 4, 247);
-				add_location(tbody, file$4, 20, 4, 425);
+				add_location(th0, file$4, 14, 8, 301);
+				add_location(th1, file$4, 15, 8, 324);
+				add_location(th2, file$4, 16, 8, 348);
+				add_location(th3, file$4, 17, 8, 371);
+				add_location(th4, file$4, 18, 8, 401);
+				add_location(tr, file$4, 13, 6, 287);
+				add_location(thead, file$4, 12, 4, 272);
+				add_location(tbody, file$4, 21, 4, 450);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, thead, anchor);
@@ -15390,7 +15526,7 @@ var app = (function () {
 				current = true;
 			},
 			p: function update(ctx, dirty) {
-				if (dirty & /*cars, parseInt*/ 1) {
+				if (dirty & /*cars, parseInt, getCars*/ 3) {
 					each_value = ensure_array_like_dev(/*cars*/ ctx[0]);
 					let i;
 
@@ -15450,7 +15586,7 @@ var app = (function () {
 			block,
 			id: create_default_slot$2.name,
 			type: "slot",
-			source: "(11:0) <Table bordered>",
+			source: "(12:0) <Table bordered>",
 			ctx
 		});
 
@@ -15484,7 +15620,7 @@ var app = (function () {
 			p: function update(ctx, [dirty]) {
 				const table_changes = {};
 
-				if (dirty & /*$$scope, cars*/ 17) {
+				if (dirty & /*$$scope, cars, getCars*/ 35) {
 					table_changes.$$scope = { dirty, ctx };
 				}
 
@@ -15519,7 +15655,15 @@ var app = (function () {
 		let { $$slots: slots = {}, $$scope } = $$props;
 		validate_slots('CarsList', slots, []);
 		let { cars = [] } = $$props;
-		const writable_props = ['cars'];
+		let { getCars } = $$props;
+
+		$$self.$$.on_mount.push(function () {
+			if (getCars === undefined && !('getCars' in $$props || $$self.$$.bound[$$self.$$.props['getCars']])) {
+				console.warn("<CarsList> was created without expected prop 'getCars'");
+			}
+		});
+
+		const writable_props = ['cars', 'getCars'];
 
 		Object.keys($$props).forEach(key => {
 			if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<CarsList> was created with unknown prop '${key}'`);
@@ -15527,6 +15671,7 @@ var app = (function () {
 
 		$$self.$$set = $$props => {
 			if ('cars' in $$props) $$invalidate(0, cars = $$props.cars);
+			if ('getCars' in $$props) $$invalidate(1, getCars = $$props.getCars);
 		};
 
 		$$self.$capture_state = () => ({
@@ -15534,24 +15679,26 @@ var app = (function () {
 			Button,
 			DeleteAction,
 			EditAction,
-			cars
+			cars,
+			getCars
 		});
 
 		$$self.$inject_state = $$props => {
 			if ('cars' in $$props) $$invalidate(0, cars = $$props.cars);
+			if ('getCars' in $$props) $$invalidate(1, getCars = $$props.getCars);
 		};
 
 		if ($$props && "$$inject" in $$props) {
 			$$self.$inject_state($$props.$$inject);
 		}
 
-		return [cars];
+		return [cars, getCars];
 	}
 
 	class CarsList extends SvelteComponentDev {
 		constructor(options) {
 			super(options);
-			init(this, options, instance$4, create_fragment$4, safe_not_equal, { cars: 0 });
+			init(this, options, instance$4, create_fragment$4, safe_not_equal, { cars: 0, getCars: 1 });
 
 			dispatch_dev("SvelteRegisterComponent", {
 				component: this,
@@ -15566,6 +15713,14 @@ var app = (function () {
 		}
 
 		set cars(value) {
+			throw new Error("<CarsList>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		get getCars() {
+			throw new Error("<CarsList>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+		}
+
+		set getCars(value) {
 			throw new Error("<CarsList>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
 		}
 	}
@@ -16401,7 +16556,7 @@ var app = (function () {
 	const { console: console_1 } = globals;
 	const file$2 = "src\\components\\SearchBar.svelte";
 
-	// (47:12) <InputGroupText>
+	// (45:12) <InputGroupText>
 	function create_default_slot_4(ctx) {
 		let t;
 
@@ -16423,14 +16578,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_4.name,
 			type: "slot",
-			source: "(47:12) <InputGroupText>",
+			source: "(45:12) <InputGroupText>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (46:8) <InputGroup>
+	// (44:8) <InputGroup>
 	function create_default_slot_3(ctx) {
 		let inputgrouptext;
 		let t;
@@ -16520,14 +16675,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_3.name,
 			type: "slot",
-			source: "(46:8) <InputGroup>",
+			source: "(44:8) <InputGroup>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (53:12) <InputGroupText>
+	// (51:12) <InputGroupText>
 	function create_default_slot_2(ctx) {
 		let t;
 
@@ -16549,14 +16704,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_2.name,
 			type: "slot",
-			source: "(53:12) <InputGroupText>",
+			source: "(51:12) <InputGroupText>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (52:8) <InputGroup>
+	// (50:8) <InputGroup>
 	function create_default_slot_1(ctx) {
 		let inputgrouptext;
 		let t;
@@ -16646,14 +16801,14 @@ var app = (function () {
 			block,
 			id: create_default_slot_1.name,
 			type: "slot",
-			source: "(52:8) <InputGroup>",
+			source: "(50:8) <InputGroup>",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (58:8) <Button color = "primary" on:click = {handleSubmit}>
+	// (56:8) <Button color = "primary" on:click = {handleSubmit}>
 	function create_default_slot(ctx) {
 		let t;
 
@@ -16675,7 +16830,7 @@ var app = (function () {
 			block,
 			id: create_default_slot.name,
 			type: "slot",
-			source: "(58:8) <Button color = \\\"primary\\\" on:click = {handleSubmit}>",
+			source: "(56:8) <Button color = \\\"primary\\\" on:click = {handleSubmit}>",
 			ctx
 		});
 
@@ -16733,7 +16888,10 @@ var app = (function () {
 		button.$on("click", /*handleSubmit*/ ctx[3]);
 
 		carslist = new CarsList({
-				props: { cars: /*cars*/ ctx[2] },
+				props: {
+					cars: /*cars*/ ctx[2],
+					getCars: /*getCars*/ ctx[4]
+				},
 				$$inline: true
 			});
 
@@ -16756,13 +16914,13 @@ var app = (function () {
 				div3 = element("div");
 				create_component(carslist.$$.fragment);
 				attr_dev(div0, "class", "add svelte-nxo6e0");
-				add_location(div0, file$2, 40, 4, 1191);
-				add_location(h2, file$2, 44, 8, 1307);
+				add_location(div0, file$2, 38, 4, 1085);
+				add_location(h2, file$2, 42, 8, 1201);
 				attr_dev(div1, "class", "search-bar svelte-nxo6e0");
-				add_location(div1, file$2, 43, 4, 1271);
+				add_location(div1, file$2, 41, 4, 1165);
 				attr_dev(div2, "class", "header svelte-nxo6e0");
-				add_location(div2, file$2, 39, 0, 1163);
-				add_location(div3, file$2, 62, 0, 1929);
+				add_location(div2, file$2, 37, 0, 1057);
+				add_location(div3, file$2, 60, 0, 1823);
 			},
 			l: function claim(nodes) {
 				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -16909,8 +17067,6 @@ var app = (function () {
 			Button,
 			Table,
 			searchCars,
-			EditAction,
-			DeleteAction,
 			fetchCars,
 			onMount,
 			AddUsersForm,

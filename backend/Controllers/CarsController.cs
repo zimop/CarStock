@@ -19,10 +19,11 @@ namespace CarStockApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult <IEnumerable<Car>>> GetCars()
+        public async Task<ActionResult <IEnumerable<Car>>> GetCars([FromQuery] string userId)
         {
             try{
-                var cars = await _carRepository.GetAllCarsAsync();
+                int id= int.Parse(userId);
+                var cars = await _carRepository.GetAllCarsAsync(id);
 
                 if (cars == null || !cars.Any())
                 {
@@ -36,11 +37,12 @@ namespace CarStockApi.Controllers
             }
         }
 
-        [HttpGet("search")]
-        public async Task<ActionResult <int>> GetCarId([FromQuery] string make, [FromQuery] string model, [FromQuery] int year)
+        [HttpGet("searchById")]
+        public async Task<ActionResult <int>> GetCarId([FromQuery] string make, [FromQuery] string model, [FromQuery] int year, [FromQuery] string userId)
         {
             try{
-                int id = await _carRepository.SearchByCar(make, model, year);
+                int userID= int.Parse(userId);
+                int id = await _carRepository.SearchByCar(make, model, year, userID);
                 return Ok(id);
             }
             catch (Exception ex){
@@ -49,10 +51,12 @@ namespace CarStockApi.Controllers
         } 
 
         [HttpPost]
-        public async Task<ActionResult> InsertCar([FromBody] Car car)
+        public async Task<ActionResult> InsertCar([FromBody] CarRequest request)
         {
             try{
-                await _carRepository.AddCarAsync(car);
+                int id= int.Parse(request.UserId);
+                Car car = request.Car;
+                await _carRepository.AddCarAsync(car, id);
                 return CreatedAtAction(nameof(GetCars), car);
             }
             catch (Exception ex) {
@@ -73,5 +77,48 @@ namespace CarStockApi.Controllers
             }
         }
 
+        [HttpPut("{id}")]
+        public async Task<ActionResult> UpdateCar(int id, [FromBody] int stockLevel)
+        {
+            try{
+                var response = await _carRepository.UpdateCarAsync(id, stockLevel);
+                
+                if (response == 0)
+                {
+                    return NotFound($"Car with id {id} not found");
+                }
+                
+                return Ok(response);
+            }
+            catch (Exception ex) {
+                return StatusCode(500, $"Internal server error (update): {ex.Message}");
+            }
+        }
+
+        [HttpGet("search")]
+        public async Task<ActionResult <IEnumerable<Car>>> Search([FromQuery] string make = "", [FromQuery] string model = "", [FromQuery] string userId = "")
+        {
+            try{
+                Console.WriteLine("Hello, world!");
+                int id= int.Parse(userId);
+                var cars = await _carRepository.Search(make, model, id);
+                Console.WriteLine("im back baby");
+                foreach (var car in cars)
+                {
+                    // Assuming Car has properties: Id, Make, Model, and Year
+                    Console.WriteLine($"ID: {car.Id}, Make: {car.Make}, Model: {car.Model}, Year: {car.Year}");
+                }
+
+                return Ok(cars);
+            }
+            catch (Exception ex){
+                return StatusCode(500, $"Internal server error (get): {ex.Message}");
+            }
+        } 
     }
+    public class CarRequest
+{
+    public Car Car { get; set; }
+    public string UserId { get; set; }
+}
 }

@@ -1,16 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
-    import { fetchCars } from '../api/api'
+
     import { Table, Button } from '@sveltestrap/sveltestrap';
     import DeleteAction from './DeleteAction.svelte';
     import EditAction from './EditAction.svelte';
-    
-    let cars = [];
-    onMount(async () => {
-        cars = await fetchCars();
-        console.log(cars)
-        console.log("i am zimo")
-    } );
+
+    export let cars = [];
 
 </script>
 

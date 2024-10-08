@@ -8,8 +8,6 @@
 <div>
   <h1>Car Stock Management System</h1>
   <SearchBar/>
-  <AddUsersForm/>
-  <CarsList/>
 </div>
 
 <style>

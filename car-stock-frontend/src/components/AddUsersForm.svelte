@@ -2,6 +2,8 @@
     import { Button, Modal, Input} from "@sveltestrap/sveltestrap";
     import { addCar } from './../api/api.js';
 
+    export let getCars;
+
     let open = false;
     const toggle = () => (open = !open);
 
@@ -10,38 +12,86 @@
     let model = '';
     let stocklevel = 0;
 
+    let errors = {
+        year: '',
+        make: '',
+        model: '',
+        stocklevel: ''
+    };
+
+    const validateInputs = () => {
+        let isValid = true;
+        const currentYear = new Date().getFullYear();
+        // Reset error messages
+        errors = { year: '', make: '', model: '', stocklevel: '' };
+
+        if (!year || isNaN(year) || parseInt(year) < 1886 || parseInt(year) > currentYear) {
+            errors.year = `Please enter a valid year (between 1886 and ${currentYear})`;
+            isValid = false;
+        }
+        if (!make) {
+            errors.make = 'Please enter a car make';
+            isValid = false;
+        }
+        if (!model) {
+            errors.model = 'Please enter a car model';
+            isValid = false;
+        }
+        if ((stocklevel && isNaN(stocklevel)) || parseInt(stocklevel) < 0) {
+            errors.stocklevel = 'Stock level must be a number';
+            isValid = false;
+        }
+        return isValid;
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const newCar = {year:parseInt(year), make, model, stocklevel:parseInt(stocklevel)};
-        const response = await addCar(newCar);
-        year = "";
-        make = "";
-        model = "";
-        stocklevel = "";
-        // send data to the api
-        open = false;
+        if (validateInputs()){
+            const newCar = {year:parseInt(year), make, model, stocklevel:parseInt(stocklevel)};
+            const response = await addCar(newCar);
+            getCars();
+            year = "";
+            make = "";
+            model = "";
+            stocklevel = "";
+            // send data to the api
+            open = false;
+        }
+        
     }
 </script>
 
 <div>
-    <Button on:click= {toggle} color = "secondary" >Add A New Car</Button>
+    <Button on:click= {toggle} color = "success" size = "lg">Add A New Car</Button>
     <Modal body header="Add A New Car" isOpen={open} {toggle}>
         <div>
-            <div class = "make">
+            <div class = "input">
                 <span>Make:</span>
-                <Input type="email" placeholder="make" bind:value = {make}/>
+                <Input type="text" placeholder="Make" bind:value = {make}/>
+                {#if errors.make}
+                    <span class = "error">{errors.make}</span>
+                {/if}
             </div>
-            <div class = "make">
+            <div class = "input">
                 <span>Model:</span>
-                <Input type="email" placeholder="model" bind:value = {model}/>
+                <Input type="text" placeholder="Model" bind:value = {model}/>
+                {#if errors.model}
+                    <span class = "error">{errors.model}</span>
+                {/if}
             </div>
-            <div class = "make">
+            <div class = "input">
                 <span>Year:</span>
-                <Input type="email" placeholder="year" bind:value = {year}/>
+                <Input type="text" placeholder="Year" bind:value = {year}/>
+                {#if errors.year}
+                    <span class = "error">{errors.year}</span>
+                {/if}
             </div>
-            <div class = "make">
+            <div class = "input">
                 <span>Stock Number:</span>
-                <Input type="email" placeholder="stock (optional field)" bind:value = {stocklevel}/>
+                <Input type="text" placeholder="stock (optional field)" bind:value = {stocklevel}/>
+                {#if errors.stocklevel}
+                    <span class = "error">{errors.stocklevel}</span>
+                {/if}
             </div>
             <Button on:click = {handleSubmit} color="primary">Submit</Button>
         </div>
@@ -50,11 +100,10 @@
 
 
 <style>
-    .make{
-        display:flex;
-        flex-direction: row;
-        justify-content:center;
-        align-items:center;
-        gap:10px;
+    .input{
+        padding-bottom: 10px;
+    }
+    .error{
+        color:red;
     }
 </style>

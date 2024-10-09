@@ -13,7 +13,7 @@ export const login = async (username, password) => {
 
     const decodedToken = jwtDecode(token);
 
-    console.log(decodedToken);
+    //console.log(decodedToken);
 
     sessionStorage.setItem('token', token);
     sessionStorage.setItem('username', decodedToken.unique_name);

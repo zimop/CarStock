@@ -17,8 +17,6 @@
         //event.preventDefault();
         const result = await searchCars(make, model, userId);
         cars = result;
-        make = "";
-        model = "";
         // send data to the api
         open = false;
         console.log(cars);

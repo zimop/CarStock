@@ -1,6 +1,6 @@
 <script>
     import { Button, Modal, Input} from "@sveltestrap/sveltestrap";
-    import { addCar } from './../api/api.js';
+    import { addCar, fetchCarId } from './../api/api.js';
 
     export let getCars;
 
@@ -16,14 +16,15 @@
         year: '',
         make: '',
         model: '',
-        stocklevel: ''
+        stocklevel: '',
+        duplicate: '',
     };
 
     const validateInputs = () => {
         let isValid = true;
         const currentYear = new Date().getFullYear();
         // Reset error messages
-        errors = { year: '', make: '', model: '', stocklevel: '' };
+        errors = { year: '', make: '', model: '', stocklevel: '', duplicate: ''};
 
         if (!year || isNaN(year) || parseInt(year) < 1886 || parseInt(year) > currentYear) {
             errors.year = `Please enter a valid year (between 1886 and ${currentYear})`;
@@ -48,17 +49,22 @@
         event.preventDefault();
         if (validateInputs()){
             const userId = sessionStorage.getItem('userId');
-            const newCar = {year:parseInt(year), make, model, stocklevel:parseInt(stocklevel)};
-            const response = await addCar(newCar, userId);
-            getCars();
-            year = "";
-            make = "";
-            model = "";
-            stocklevel = "";
-            // send data to the api
-            open = false;
+            const carId = await fetchCarId(make, model, parseInt(year), userId);
+            if (carId == 0) {
+                const newCar = {year:parseInt(year), make, model, stocklevel:parseInt(stocklevel)};
+                const response = await addCar(newCar, userId);
+                getCars();
+                year = "";
+                make = "";
+                model = "";
+                stocklevel = "";
+                // send data to the api
+                open = !open;
+            }
+            else{
+                errors.duplicate = 'Car already exists';
+            }
         }
-        
     }
 </script>
 
@@ -94,11 +100,13 @@
                     <span class = "error">{errors.stocklevel}</span>
                 {/if}
             </div>
+            {#if errors.duplicate}
+                <p class = "error">{errors.duplicate}</p>
+            {/if}
             <Button on:click = {handleSubmit} color="primary">Submit</Button>
         </div>
     </Modal>
 </div>
-
 
 <style>
     .input{

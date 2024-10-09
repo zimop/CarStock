@@ -5,6 +5,7 @@
     import { InputGroup, InputGroupText, Input, Button, Table } from '@sveltestrap/sveltestrap';
     import AddUsersForm from './AddUsersForm.svelte';
     import CarsList from './CarsList.svelte';
+  import LogOutButton from './LogOutButton.svelte';
 
     let make = ""
     let model = ""
@@ -33,32 +34,37 @@
     });
 </script>
 
-<div class = "wide">
-    <div class = "header">
-        <div class = "add">
-            <AddUsersForm getCars={getCars}/>
+<div>
+    <div class = "wide">
+        <div class = "header">
+            <div class = "add">
+                <AddUsersForm getCars={getCars}/>
+            </div>
+            <div class = "search-bar">
+                <h2>Search:</h2>
+                <InputGroup>
+                    <InputGroupText>
+                        Make
+                    </InputGroupText>
+                    <Input placeholder="Enter a car make" min={0} max={100} type="text" step="1" bind:value = {make}/>
+                </InputGroup>
+                <InputGroup>
+                    <InputGroupText>
+                        Model
+                    </InputGroupText>
+                    <Input placeholder="Enter a car model" min={0} max={100} type="text" step="1" bind:value = {model}/>
+                </InputGroup>
+                <Button color = "success" size = "lg" on:click = {handleSubmit}>
+                    Search
+                </Button>
+            </div>
         </div>
-        <div class = "search-bar">
-            <h2>Search:</h2>
-            <InputGroup>
-                <InputGroupText>
-                    Make
-                </InputGroupText>
-                <Input placeholder="Enter a car make" min={0} max={100} type="text" step="1" bind:value = {make}/>
-            </InputGroup>
-            <InputGroup>
-                <InputGroupText>
-                    Model
-                </InputGroupText>
-                <Input placeholder="Enter a car model" min={0} max={100} type="text" step="1" bind:value = {model}/>
-            </InputGroup>
-            <Button color = "primary" on:click = {handleSubmit}>
-                Submit
-            </Button>
+        <div>
+            <CarsList cars = {cars} getCars = {getCars}/>
         </div>
-    </div>
-    <div>
-        <CarsList cars = {cars} getCars = {getCars}/>
+        <div>
+            <LogOutButton/>
+        </div>
     </div>
 </div>
 
@@ -68,10 +74,9 @@
         flex-direction: row;
         justify-content: space-between;
         padding-top:50px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
     .search-bar{
-        padding-right: 40px;
         display:flex;
         flex-direction: row;
         gap:20px;
@@ -90,8 +95,9 @@
         justify-content: flex-end;
     }
     
-
     .wide{
         max-width:2000px;
+        padding-left:30px;
+        padding-right:30px;
     }
 </style>

@@ -10,14 +10,14 @@
 </script>
 
 <div>
-    <Table bordered>
+    <Table bordered class = "table">
         <thead>
         <tr>
-            <th>Make</th>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Stock Level</th>
-            <th>Actions</th>
+            <th><h3>Make</h3></th>
+            <th><h3>Model</h3></th>
+            <th><h3>Year</h3></th>
+            <th><h3>Stock Level</h3></th>
+            <th><h3>Actions</h3></th>
         </tr>
         </thead>
         <tbody>

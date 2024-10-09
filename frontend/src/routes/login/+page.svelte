@@ -35,14 +35,47 @@
 
 </script>
 
-<div>
-    <h2>Login</h2>
-    <form on:submit = {handleSubmit}>
-        <Input type="email" placeholder="Email" bind:value={email} required />
-        <Input type="password" placeholder="Password" bind:value={password} required />
-        {#if errorMessage}
-            <p style="color: red;">{errorMessage}</p>
-        {/if}
-        <Button color="primary" type="submit" on:click={handleSubmit}>Login</Button>
-    </form>
+<div class ="middle">
+    <h1>Welcome to the Car Stock System</h1>
+    <h2>Please Enter your Credentials</h2>
+    <div class = "form">
+        <h1>Login</h1>
+        <form on:submit = {handleSubmit} class = "credentials">
+            <Input type="email" placeholder="Username" bind:value={email} required />
+            <Input type="password" placeholder="Password" bind:value={password} required />
+            {#if errorMessage}
+                <p style="color: red;">{errorMessage}</p>
+            {/if}
+            <Button color="primary" type="submit" on:click={handleSubmit}>Login</Button>
+        </form>
+    </div>
 </div>
+<style>
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        width:300px;
+        border-radius: 20px;
+        border: 2px solid;
+        padding:20px;
+    }
+    .credentials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .middle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:10px;
+        height: 100vh;
+    }
+</style>

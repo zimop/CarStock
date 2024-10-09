@@ -10,6 +10,6 @@
     }
 </script>
 
-<Button color = "primary" on:click = {handleLogout}>
+<Button color = "primary" size = "lg" on:click = {handleLogout}>
     Logout
 </Button>

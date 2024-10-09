@@ -46,7 +46,7 @@
 <Modal body header="Edit stock levels" isOpen={open} {toggle}>
     <div>
         <div class = "make">
-            <span>Stock Level:</span>
+            <div>Stock Level:</div>
             <Input type="email" placeholder="make" bind:value = {stocklevel}/>
             {#if error}
                 <span class = "error">{error}</span>
@@ -63,6 +63,8 @@
         display:flex;
         flex-direction:column;
         gap:10px;
+        font-weight: bold;
+        font-size: 20px;
     }
 
     .button{

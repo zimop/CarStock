@@ -73,28 +73,28 @@
     <Modal body header="Add A New Car" isOpen={open} {toggle}>
         <div>
             <div class = "input">
-                <span>Make:</span>
+                <div class = "desc">Make:</div>
                 <Input type="text" placeholder="Make" bind:value = {make}/>
                 {#if errors.make}
                     <span class = "error">{errors.make}</span>
                 {/if}
             </div>
             <div class = "input">
-                <span>Model:</span>
+                <div class = "desc">Model:</div>
                 <Input type="text" placeholder="Model" bind:value = {model}/>
                 {#if errors.model}
                     <span class = "error">{errors.model}</span>
                 {/if}
             </div>
             <div class = "input">
-                <span>Year:</span>
+                <div class = "desc">Year:</div>
                 <Input type="text" placeholder="Year" bind:value = {year}/>
                 {#if errors.year}
                     <span class = "error">{errors.year}</span>
                 {/if}
             </div>
             <div class = "input">
-                <span>Stock Number:</span>
+                <div class = "desc">Stock Number:</div>
                 <Input type="text" placeholder="stock (optional field)" bind:value = {stocklevel}/>
                 {#if errors.stocklevel}
                     <span class = "error">{errors.stocklevel}</span>
@@ -103,14 +103,19 @@
             {#if errors.duplicate}
                 <p class = "error">{errors.duplicate}</p>
             {/if}
-            <Button on:click = {handleSubmit} color="primary">Submit</Button>
+            <Button on:click = {handleSubmit} color="primary" size = "lg">Submit</Button>
         </div>
     </Modal>
 </div>
 
 <style>
     .input{
-        padding-bottom: 10px;
+        padding-bottom: 20px;
+    }
+    .desc{
+        padding-bottom:8px;
+        font-weight: bold;
+        font-size: 20px;
     }
     .error{
         color:red;

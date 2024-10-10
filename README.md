@@ -15,7 +15,7 @@ npm i
 ```
 
 ### Backend:
-To install frontend packages, `cd` into the backend directory and run:
+To install backend packages, `cd` into the backend directory and run:
 
 ```bash
 dotnet restore

@@ -132,3 +132,8 @@ C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protoco
 C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\zimop\CarStock\backend\bin\Debug\net8.0\Sprache.dll

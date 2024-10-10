@@ -3,6 +3,10 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using UserApi.Models;
+using Microsoft.Extensions.Configuration;
+using DotNetEnv;
+using System;
+
 
 public class AuthService{
     private readonly IConfiguration _configuration;
@@ -18,15 +22,16 @@ public class AuthService{
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.UniqueName, user.Username)
         };
-
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
+        Console.WriteLine("heelo");
+        Console.WriteLine(Environment.GetEnvironmentVariable("JWT_SECRET"));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("JWT_SECRET")));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
         var token = new JwtSecurityToken(
-            issuer: _configuration["JWT:Issuer"],
-            audience: _configuration["JWT:Audience"],
+            issuer: Environment.GetEnvironmentVariable("JWT_ISSUER"),
+            audience: Environment.GetEnvironmentVariable("JWT_AUDIENCE"),
             claims: claims,
-            expires: DateTime.Now.AddMinutes(double.Parse(_configuration["JWT:ExpiresInMinutes"])),
+            expires: DateTime.Now.AddMinutes(double.Parse(Environment.GetEnvironmentVariable("JWT_EXPIRY"))),
             signingCredentials: creds
         );
 

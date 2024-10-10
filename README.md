@@ -36,3 +36,5 @@ cd into backend directory
 dotnet run
 ```
 run both simultaneously and the frontend should be running on http://localhost:5173
+
+For Documentation regarding the details of the application, see the document: Details.pdf

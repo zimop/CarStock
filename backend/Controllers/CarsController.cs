@@ -24,12 +24,6 @@ namespace CarStockApi.Controllers
             try{
                 int id= int.Parse(userId);
                 var cars = await _carRepository.GetAllCarsAsync(id);
-
-                if (cars == null || !cars.Any())
-                {
-                    return NotFound("No Cars found");
-                }
-
                 return Ok(cars);
             }
             catch (Exception ex){
@@ -43,6 +37,7 @@ namespace CarStockApi.Controllers
             try{
                 int userID= int.Parse(userId);
                 int id = await _carRepository.SearchByCar(make, model, year, userID);
+                Console.WriteLine(id);
                 return Ok(id);
             }
             catch (Exception ex){
@@ -99,16 +94,13 @@ namespace CarStockApi.Controllers
         public async Task<ActionResult <IEnumerable<Car>>> Search([FromQuery] string make = "", [FromQuery] string model = "", [FromQuery] string userId = "")
         {
             try{
-                Console.WriteLine("Hello, world!");
                 int id= int.Parse(userId);
                 var cars = await _carRepository.Search(make, model, id);
-                Console.WriteLine("im back baby");
                 foreach (var car in cars)
                 {
                     // Assuming Car has properties: Id, Make, Model, and Year
                     Console.WriteLine($"ID: {car.Id}, Make: {car.Make}, Model: {car.Model}, Year: {car.Year}");
                 }
-
                 return Ok(cars);
             }
             catch (Exception ex){
@@ -117,8 +109,8 @@ namespace CarStockApi.Controllers
         } 
     }
     public class CarRequest
-{
-    public Car Car { get; set; }
-    public string UserId { get; set; }
-}
+    {
+        public Car Car { get; set; }
+        public string UserId { get; set; }
+    }
 }

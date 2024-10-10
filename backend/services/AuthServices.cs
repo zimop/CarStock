@@ -22,8 +22,7 @@ public class AuthService{
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.UniqueName, user.Username)
         };
-        Console.WriteLine("heelo");
-        Console.WriteLine(Environment.GetEnvironmentVariable("JWT_SECRET"));
+
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("JWT_SECRET")));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

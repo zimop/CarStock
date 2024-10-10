@@ -18,9 +18,15 @@ public class UserRepository{
     {
         using (IDbConnection db = new SqliteConnection(_connectionString))
         {
-            string sql = "SELECT * FROM Users WHERE Username = @Username AND Password = @Password";
-            var user = await db.QueryFirstOrDefaultAsync<User>(sql, new {Username = username, Password = password});
-            return user;
+            try{
+                string sql = "SELECT * FROM Users WHERE Username = @Username AND Password = @Password";
+                var user = await db.QueryFirstOrDefaultAsync<User>(sql, new {Username = username, Password = password});
+                return user;
+            } catch (Exception ex){
+                Console.WriteLine($"SQL Error: {ex.Message}");
+                throw new Exception("An unexpected error occurred while searching for the user in the database", ex);
+            }
+            
         }
     }
 }

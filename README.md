@@ -20,3 +20,19 @@ To install frontend packages, `cd` into the backend directory and run:
 ```bash
 dotnet restore
 ```
+
+### Running the application:
+- Add .env file to receive token secret variables for JWT
+
+#### Frontend running:
+cd into frontend directory
+```bash
+npm run dev
+```
+
+#### Backend running:
+cd into backend directory
+```bash
+dotnet run
+```
+run both simultaneously and the frontend should be running on http://localhost:5173

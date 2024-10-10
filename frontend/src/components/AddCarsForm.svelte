@@ -1,6 +1,6 @@
 <script>
     import { Button, Modal, Input} from "@sveltestrap/sveltestrap";
-    import { addCar, fetchCarId } from './../api/api.js';
+    import { addCar, fetchCarId } from '../api/api.js';
 
     export let getCars;
 

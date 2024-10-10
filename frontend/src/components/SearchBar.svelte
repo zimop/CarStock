@@ -3,7 +3,7 @@
     import { fetchCars } from '../api/api'
     import { onMount } from 'svelte';
     import { InputGroup, InputGroupText, Input, Button, Table } from '@sveltestrap/sveltestrap';
-    import AddUsersForm from './AddUsersForm.svelte';
+    import AddCarsForm from './AddCarsForm.svelte';
     import CarsList from './CarsList.svelte';
   import LogOutButton from './LogOutButton.svelte';
 
@@ -38,7 +38,7 @@
     <div class = "wide">
         <div class = "header">
             <div class = "add">
-                <AddUsersForm getCars={getCars}/>
+                <AddCarsForm getCars={getCars}/>
             </div>
             <div class = "search-bar">
                 <h2>Search:</h2>

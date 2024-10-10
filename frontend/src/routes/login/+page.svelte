@@ -9,24 +9,32 @@
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        try {
-            const {token, username, userId} = await login(email, password);
-            errorMessage = "";
+        const {token, username, userId, error} = await login(email, password);
+
+        if (error) {
+            errorMessage = error; // Display error message from the login function
+        } else {
+            errorMessage = ""; // Clear the error message if login is successful
             console.log(`Logged in as ${username}`);
-            goto('/home');
-        } catch (error) {
-            if (error.response && error.response.status === 401){
-                errorMessage = 'Incorrect username or password. Please try again.';
-            }
-            else{
-                console.error('Error logging in:', error);
-            }
+            goto('/home'); // Redirect after successful login
         }
+        // try {
+            
+        //     errorMessage = "";
+        //     console.log(`Logged in as ${username}`);
+        //     goto('/home');
+        // } catch (error) {
+        //     if (error.response && error.response.status === 401){
+        //         errorMessage = 'Incorrect username or password. Please try again.';
+        //     }
+        //     else{
+        //         console.error('Error logging in:', error);
+        //     }
+        // }
     }
 
     onMount(() => {
         const token = sessionStorage.getItem('token');
-        
         // If token exists, the user is already logged in, so redirect them
         if (token) {
             goto('/home'); // Redirect to the homepage or another page

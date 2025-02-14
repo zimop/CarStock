@@ -1,5 +1,20 @@
 # CarStock
 
+I built this application as a way of learning about C#, and .NET. It is a simple Car Dealership administration application that keeps track of cars in that dealership.
+
+## Stack:
+
+### Frontend:
+Svelte.js 
+SvelteStrap
+Tailwind
+vite.js (builtool)
+
+## Backend:
+C# (Dotnet framework)
+SQLite
+Dapper
+
 ## Installing the Application:
 
 This application relies on C#, so .NET needs to be installed in order for it to run:  
